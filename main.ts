@@ -1,3 +1,8 @@
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+    comida.x += randint(0, scene.screenWidth())
+    comida.y += randint(0, scene.screenHeight())
+})
+let comida: Sprite = null
 scene.setBackgroundColor(9)
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
@@ -18,7 +23,7 @@ let mySprite = sprites.create(img`
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
 controller.moveSprite(mySprite)
-let comida = sprites.create(img`
+comida = sprites.create(img`
     . . . . . . b b b b . . . . . . 
     . . . . . . b 4 4 4 b . . . . . 
     . . . . . . b b 4 4 4 b . . . . 
