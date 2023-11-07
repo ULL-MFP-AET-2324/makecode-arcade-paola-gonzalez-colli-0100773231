@@ -1,10 +1,14 @@
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-    comida.x += randint(0, scene.screenWidth())
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    comida.x += randint(0, scene.screenWidth() - 0)
     comida.y += randint(0, scene.screenHeight())
+    info.startCountdown(5)
+    info.changeScoreBy(1)
+    patito.changeScale(0.1, ScaleAnchor.Middle)
 })
 let comida: Sprite = null
+let patito: Sprite = null
 scene.setBackgroundColor(9)
-let mySprite = sprites.create(img`
+patito = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . b 5 5 b . . . 
@@ -22,7 +26,7 @@ let mySprite = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
-controller.moveSprite(mySprite)
+controller.moveSprite(patito)
 comida = sprites.create(img`
     . . . . . . b b b b . . . . . . 
     . . . . . . b 4 4 4 b . . . . . 
