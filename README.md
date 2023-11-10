@@ -4,6 +4,11 @@
 ## Assignment
 Update the variable name so that it matches the food sprite image
 
+## Repositorios
+- [clasroom](https://classroom.github.com/classrooms/149103980-ull-mfp-aet-2324-alu0100773231)
+- [organización](https://github.com/ull-mfp-aet-2324-alu0100773231)
+- [Asignación](https://classroom.github.com/a/aaRu9ISj)
+
 ## Use this extension
 
 This repository can be added as an **extension** in MakeCode.
