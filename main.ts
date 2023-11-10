@@ -1,7 +1,6 @@
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    comida.x += randint(0, scene.screenWidth() - 0)
-    comida.y += randint(0, scene.screenHeight())
-    info.startCountdown(5)
+    comida.setPosition(randint(10, 160), randint(10, 120))
+    info.startCountdown(20)
     info.changeScoreBy(1)
     patito.changeScale(0.1, ScaleAnchor.Middle)
 })
